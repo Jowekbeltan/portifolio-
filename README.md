@@ -6,7 +6,7 @@ This is my personal portfolio website built using **HTML** and **CSS**. It showc
 
 ## 🌐 Live Site
 
-🔗 [View My Portfolio](https://jowekbeltan.github.io/portfolio/)  
+🔗 [View My Portfolio]( https://jowekbeltan.github.io/portifolio-/)  
 *(Replace this link with your actual GitHub Pages URL once live.)*
 
 ---
