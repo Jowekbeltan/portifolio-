@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Skills</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header Styles */
+    header {
+      background-color: rgba(44, 62, 80, 0.85);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    /* Text Morph Container */
+    .text-morph-container {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      perspective: 500px;
+    }
+
+    /* Text Morph Animation */
+    .text-morph {
+      position: relative;
+      height: 60px;
+      width: 300px;
+    }
+
+    .text-morph span {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      opacity: 0;
+      animation: textMorph 8s infinite;
+    }
+
+    .text-morph .text1 {
+      animation-delay: 0s;
+    }
+
+    .text-morph .text2 {
+      animation-delay: 4s;
+    }
+
+    @keyframes textMorph {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%) rotateX(90deg) scale(0.8);
+      }
+      10%, 40% {
+        opacity: 1;
+        transform: translateX(-50%) rotateX(0deg) scale(1);
+      }
+      50%, 100% {
+        opacity: 0;
+        transform: translateX(-50%) rotateX(-90deg) scale(0.8);
+      }
+    }
+
+    /* Skills Section */
+    #Skills {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .word-list span {
+      padding: 0.8rem 1.5rem;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Johnson Ontweka</h1>
+    <nav>
+      <a href="index.html" class="glow-button">About</a>
+      <a href="Certifications.html" class="glow-button">Certifications</a>
+      <a href="Contacts.html" class="glow-button">Contacts</a>
+      <a href="Skills.html" class="glow-button">Skills</a>
+      <a href="Home.html" class="glow-button">Home</a>
+    </nav>
+  </header>
+
+  <!-- Text Morph Section -->
+  <div class="text-morph-container">
+    <div class="text-morph">
+      <span class="text1">Cloud Engineer</span>
+      <span class="text2">Web Developer</span>
+    </div>
+  </div>
+
+  <section id="Skills">
+    <h2>Skills</h2>
+    <div class="word-list">
+      <span style="--i:1;">Cloud Computing</span>
+      <span style="--i:2;">Web Development</span>
+      <span style="--i:3;">Software Engineering</span>
+      <span style="--i:4;">UI/UX Design</span>
+      <span style="--i:5;">Docker</span>
+      <span style="--i:6;">Kubernetes</span>
+      <span style="--i:7;">JavaScript</span>
+      <span style="--i:8;">React</span>
+      <span style="--i:9;">HTML/CSS</span>
+      <span style="--i:10;">Empathy</span>
+      <span style="--i:11;">Problem Solving</span>
+      <span style="--i:12;">C Programming</span>
+      <span style="--i:13;">C++ Programming</span>
+      <span style="--i:14;">Cloud Infrastructure</span>
+      <span style="--i:15;">Database Management</span>
+      <span style="--i:16;">System Administration</span>
+      <span style="--i:17;">Adobe XD</span>
+    </div>
+  </section>
+
+  <script>
+    // Optional: Add console log to verify script is loading
+    console.log("Text morph animation loaded");
+  </script>
+</body>
+</html>

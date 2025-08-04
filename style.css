@@ -1,0 +1,342 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333333;
+}
+
+header {
+  background: #333;
+  color: #5098a7;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #2be7a8;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.Project {
+  background: #fff;
+  border: 1px solid #aa7416e3;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;   /* Makes it circular */
+  float: right;          /* Aligns it to the left */
+  margin: 20px;         /* Optional spacing */
+  object-fit: cover;    /* Makes the image fit nicely */
+}
+.glow-button {
+  background-color: #5098a7;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 5px #5098a7, 0 0 10px #5098a7;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  transform: scale(1.05);
+}
+i, .material-icons {
+  margin-right: 8px;
+  color: #5098a7;
+}
+.contact-info {
+  display: none;
+}
+.custom-text {
+    font-family: Cursive;
+    font-size: 22px;
+    font-weight: bold;
+}
+.glow-button {
+  background: linear-gradient(135deg, #5098a7, #00ffff);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 30px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 0 10px #5098a7;
+}
+
+.glow-button:hover {
+  border-radius: 0%;
+  background: linear-gradient(135deg, #00ffff, #5098a7);
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 0 20px #00ffff;
+}
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  float: right;
+  margin: 20px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 10px #5098a7;
+}
+
+.profile-pic:hover {
+  border-radius: 20%;
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 0 20px #00ffff;
+}
+.morph-title {
+  color: #333;
+  font-size: 24px;
+  transition: all 0.4s ease-in-out;
+}
+
+.morph-title:hover {
+  color: #00ffff;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+.text-morph {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+}
+
+.text-morph span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  animation: morphText 6s infinite;
+  opacity: 0;
+}
+
+.text-morph .text1 {
+  animation-delay: 0s;
+}
+
+.text-morph .text2 {
+  animation-delay: 3s;
+}
+
+@keyframes morphText {
+  0%, 20% { opacity: 1; transform: translateY(0); }
+  40%, 60% { opacity: 0; transform: translateY(-100%); }
+  80%, 100% { opacity: 1; transform: translateY(0); }
+}
+.typed-text::after {
+  content: "Cloud Engineer";
+  animation: switchText 8s infinite;
+}
+
+@keyframes switchText {
+  0% { content: "Cloud Engineer"; }
+  25% { content: "Web Developer"; }
+  50% { content: "Tech Enthusiast"; }
+  75% { content: "Problem Solver"; }
+}
+.word-list {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.word-list span {
+  opacity: 0;
+  animation: showUp 0.6s ease forwards;
+  animation-delay: calc(var(--i) * 0.5s);
+}
+
+@keyframes showUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+/* General styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 0.5rem 0 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.glow-button {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Certifications section */
+.certifications-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.certifications-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.certification-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+}
+
+.certification-card img {
+  max-width: 200px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cert-link:hover {
+  background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      height: 100vh;
+      perspective: 1px;
+    }
+    
+    .parallax-wrapper {
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      perspective: 1px;
+    }
+    
+    .parallax-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transform: translateZ(-1px) scale(2);
+      z-index: -1;
+    }
+    
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      transform-style: preserve-3d;
+      z-index: 1;
+    }
+    
+    .morph-title {
+      font-size: 3rem;
+      margin: 1rem 0;
+      animation: morph 8s ease-in-out infinite;
+    }
+    
+    @keyframes morph {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.05) rotate(2deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="parallax-wrapper">
+    <div class="parallax-background"></div>
+    <header>
+      <h1>Johnson Ontweka</h1>
+      <h2 class="morph-title">Hello, I'm Johnson Ontweka</h2>
+      <p></p>
+      <nav>
+        <a href="index.html" class="glow-button"> About</a>
+        <a href="Certifications.html" class="glow-button"> Certifications</a>
+        <a href="Contacts.html" class="glow-button"> Contacts</a>
+        <a href="Skills.html" class="glow-button"> Skills</a>
+        <a href="Home.html" class="glow-button"> Home</a>
+      </nav>
+    </header>
+  </div>
+</body>
+</html>
